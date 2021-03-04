@@ -23,7 +23,7 @@ public class Entity : MonoBehaviour
         return rb;
     }
 
-    public void Delete()
+    public virtual void Delete()
     {
         Object.Destroy(gameObject);
     }

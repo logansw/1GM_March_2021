@@ -12,12 +12,7 @@ public class Marble : Entity
     void Start()
     {
         gameObject.tag = "Marble";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        EntityMan.Instance.targetsList.Add(gameObject);
     }
 
     public int getHealth()
@@ -28,5 +23,11 @@ public class Marble : Entity
     public int getDamage()
     {
         return damage;
+    }
+
+    public override void Delete()
+    {
+        EntityMan.Instance.targetsList.Remove(gameObject);
+        base.Delete();
     }
 }
