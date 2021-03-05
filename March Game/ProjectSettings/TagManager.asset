@@ -8,6 +8,7 @@ TagManager:
   - Marble
   - Bucket
   - Peg
+  - Pellet
   layers:
   - Default
   - TransparentFX
