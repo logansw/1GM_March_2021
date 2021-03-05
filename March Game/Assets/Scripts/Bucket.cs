@@ -35,6 +35,10 @@ public class Bucket : Entity
             {
                 GameManager.Instance.Defeat();
             }
+        } else if (obj.CompareTag("Pellet"))
+        {
+            Pellet pellet = obj.GetComponent<Pellet>();
+            pellet.Delete();
         }
     }
 }

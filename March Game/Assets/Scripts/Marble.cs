@@ -7,6 +7,7 @@ public class Marble : Entity
     [SerializeField] protected int health;
     [SerializeField] protected int damage;
     [SerializeField] protected GameObject coin;
+    private bool alive = true;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,13 @@ public class Marble : Entity
         if (health + amount <= 0)
         {
             health = 0;
+            // Need this boolean check to handle the case when a marble is killed by multiple pellets
+            // within the same frame. 
+            if (alive)
+            {
+                alive = false;
+                Crack();
+            }
         }
         else
         {

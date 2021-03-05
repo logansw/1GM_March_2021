@@ -7,11 +7,14 @@ public class Pellet : Entity
 
     [SerializeField] protected int damage;
     [SerializeField] protected bool isFresh; // If it hits something, it deals its damages and is no longer fresh.
+    // List of pellets from parent PelletTower (change later)
+    public List<Pellet> parentList;
 
     // Start is called before the first frame update
     void Start()
     {
         gameObject.tag = "Pellet";
+        isFresh = true;
     }
 
     // Update is called once per frame
@@ -23,11 +26,24 @@ public class Pellet : Entity
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject obj = collision.collider.gameObject;
-        if (obj.CompareTag("Marble"))
+        if (isFresh && obj.CompareTag("Marble"))
         {
+            isFresh = false;
             Marble marble = obj.GetComponent<Marble>();
             Debug.Log("Hit a Marble!");
-            marble.Delete(); // Later we'll want this to deal damage to the marble
+            marble.ChangeHealth(-this.damage);
+            Delete();
         }
+    }
+
+    public void InitializeVelocity(Vector3 velocity)
+    {
+        rb.velocity = velocity;
+    }
+
+    public override void Delete()
+    {
+        parentList.Remove(this);
+        base.Delete();
     }
 }

@@ -184,6 +184,8 @@ MonoBehaviour:
   rb: {fileID: 6727572895421889670}
   cost: 1
   target: {fileID: 0}
+  pellet: {fileID: 3221937547889080557, guid: 574e3106da48ba443b452d742a8bd8f7, type: 3}
+  barrel: {fileID: 6727572893646163345}
 --- !u!58 &6727572895421889689
 CircleCollider2D:
   m_ObjectHideFlags: 0
