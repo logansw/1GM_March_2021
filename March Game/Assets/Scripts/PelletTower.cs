@@ -43,7 +43,8 @@ public class PelletTower : Peg
     // NOTE: Target and tower must share the same z-position
     private void AimTowards(GameObject target)
     {
-        transform.up = target.transform.position - transform.position;
+        Vector3 direction = target.transform.position - transform.position;
+        direction.z = 0;
+        transform.up = direction;
     }
-
 }

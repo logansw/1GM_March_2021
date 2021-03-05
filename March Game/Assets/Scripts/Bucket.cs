@@ -23,13 +23,18 @@ public class Bucket : Entity
         if (obj.CompareTag("Coin"))
         {
             Coin coin = obj.GetComponent<Coin>();
-            Debug.Log("Coin: " + coin.getValue());
+            ResourceMan.Instance.ChangeDollars(coin.getValue());
             coin.Delete();
         } else if (obj.CompareTag("Marble"))
         {
             Marble marble = obj.GetComponent<Marble>();
+            ResourceMan.Instance.ChangeHealth(-marble.getDamage());
             Debug.Log("Marble: " + marble.getDamage());
             marble.Delete();
+            if (!ResourceMan.Instance.CheckHealth())
+            {
+                GameManager.Instance.Defeat();
+            }
         }
     }
 }

@@ -101,7 +101,7 @@ MonoBehaviour:
   rb: {fileID: 4220029754556831600}
   health: 1
   damage: 1
-  coin: {fileID: 0}
+  coin: {fileID: 9054860662400118365, guid: c0bd222b07d010e4786dfa5f660693a3, type: 3}
 --- !u!50 &4220029754556831600
 Rigidbody2D:
   serializedVersion: 4
