@@ -56,6 +56,7 @@ public class ResourceMan : Singleton<ResourceMan>
         } else
         {
             dollars += amount;
+            UIMan.Instance.moneyText.text = "$" + dollars;
             return true;
         }
     }

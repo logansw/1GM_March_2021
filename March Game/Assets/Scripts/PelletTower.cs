@@ -32,21 +32,24 @@ public class PelletTower : Peg
     // Update is called once per frame
     void Update()
     {
-        // Point towards nearest target
-        target = AcquireTarget();
-        if (target != null)
+        if (!towerDisabled)
         {
-            AimTowards(target);
-        }
-        // Update timer
-        reloadTimer -= Time.deltaTime;
-        // If reload timer is ready and target is not null and pellet capacity has not been reached
-        if (reloadTimer <= 0)
-        {
-            if (target != null && firedList.Count < PELLET_CAPACITY)
+            // Point towards nearest target
+            target = AcquireTarget();
+            if (target != null)
             {
-                Shoot();
-                Reload();
+                AimTowards(target);
+            }
+            // Update timer
+            reloadTimer -= Time.deltaTime;
+            // If reload timer is ready and target is not null and pellet capacity has not been reached
+            if (reloadTimer <= 0)
+            {
+                if (target != null && firedList.Count < PELLET_CAPACITY)
+                {
+                    Shoot();
+                    Reload();
+                }
             }
         }
     }

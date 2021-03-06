@@ -5,6 +5,7 @@ using UnityEngine;
 public class Peg : Entity
 {
     [SerializeField] protected int cost;
+    public bool towerDisabled;
 
     private void Start()
     {
