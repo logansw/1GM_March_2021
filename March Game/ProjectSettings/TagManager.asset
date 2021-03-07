@@ -9,6 +9,7 @@ TagManager:
   - Bucket
   - Peg
   - Pellet
+  - Peghole
   layers:
   - Default
   - TransparentFX

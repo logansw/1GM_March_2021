@@ -101,6 +101,7 @@ MonoBehaviour:
   col: {fileID: 5983739754931030058}
   rb: {fileID: 865084493640777632}
   cost: 0
+  towerDisabled: 0
 --- !u!58 &5983739754931030058
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -125,7 +126,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8888735180459756375}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
