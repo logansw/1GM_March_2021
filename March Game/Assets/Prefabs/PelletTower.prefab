@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6727572895421889689}
   - component: {fileID: 6727572895421889670}
   - component: {fileID: 8989413437201482638}
+  - component: {fileID: -8312287697881345791}
   m_Layer: 0
   m_Name: PelletTower
   m_TagString: Untagged
@@ -174,7 +175,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6727572895421889671}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de487fcda1412f342aa72adc3e5ddab5, type: 3}
   m_Name: 
@@ -183,6 +184,7 @@ MonoBehaviour:
   col: {fileID: 6727572895421889689}
   rb: {fileID: 6727572895421889670}
   cost: 1
+  towerDisabled: 0
   target: {fileID: 0}
   pellet: {fileID: 3221937547889080557, guid: 574e3106da48ba443b452d742a8bd8f7, type: 3}
   barrel: {fileID: 6727572893646163345}
@@ -233,5 +235,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c29a8f0139fa4b741a57c99ea1dcc821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8312287697881345791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727572895421889671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8903e1630a30aff43bda929f613ca450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

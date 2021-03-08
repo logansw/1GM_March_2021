@@ -13,7 +13,9 @@ using UnityEngine;
     // RETURN TO PICKUP IF YOU DON'T PLACE ON A PEGHOLE
 public class MousePlacement : MonoBehaviour
 {
-    
+
+    private Vector3 pickupLocation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,11 @@ public class MousePlacement : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnMouseDown()
+    {
+        pickupLocation = transform.position;
     }
 
     private void OnMouseDrag()
@@ -38,6 +45,12 @@ public class MousePlacement : MonoBehaviour
         if (transform.parent != null)
         {
             transform.position = transform.parent.position;
+            Debug.Log("PRETEND LIKE WE BOUGHT SOMETHING");
+            // Call Purchase Event
+            // Update this tower's bool purchased = true;
+        } else
+        {
+            transform.position = pickupLocation;
         }
     }
 
