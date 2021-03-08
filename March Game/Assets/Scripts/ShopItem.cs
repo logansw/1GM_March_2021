@@ -9,7 +9,8 @@ public class ShopItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(itemPrefab, transform.position, Quaternion.identity);
+        var item = Instantiate(itemPrefab, transform.position, Quaternion.identity);
+        item.transform.parent = gameObject.transform; // There's a bug here bc item detaches automatically when hovered over a peghole.
     }
 
     // Update is called once per frame
