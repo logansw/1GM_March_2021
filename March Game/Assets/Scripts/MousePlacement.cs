@@ -15,11 +15,12 @@ public class MousePlacement : MonoBehaviour
 {
 
     private Vector3 pickupLocation;
+    private Collider2D hoveringParent;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        hoveringParent = null;
     }
 
     // Update is called once per frame
@@ -42,12 +43,11 @@ public class MousePlacement : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (transform.parent != null)
+        if (hoveringParent != null)
         {
-            transform.position = transform.parent.position;
-            Debug.Log("PRETEND LIKE WE BOUGHT SOMETHING");
-            // Call Purchase Event
-            // Update this tower's bool purchased = true;
+            transform.parent = hoveringParent.transform; // Become child of peghole
+            transform.position = transform.parent.position; // Snap to position
+            EventMan.what.EventPurchaseTower(); // Call EventPurchaseTower Event
         } else
         {
             transform.position = pickupLocation;
@@ -58,13 +58,13 @@ public class MousePlacement : MonoBehaviour
     {
         if (collision.CompareTag("Peghole"))
         {
-            transform.parent = collision.transform;
+            hoveringParent = collision; // Hold on to the Collider2D we're hovering
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        transform.parent = null;
+        hoveringParent = null; // Let go of Collider2D we were holding
     }
 
 }
