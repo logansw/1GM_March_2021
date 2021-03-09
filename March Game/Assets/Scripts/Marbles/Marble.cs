@@ -6,7 +6,7 @@ public class Marble : Entity
 {
     [SerializeField] protected int health;
     [SerializeField] protected int damage;
-    [SerializeField] protected GameObject coin;
+    [SerializeField] private Coin[] coins;
     private bool alive = true;
 
     // Start is called before the first frame update
@@ -52,7 +52,10 @@ public class Marble : Entity
 
     public void Crack()
     {
-        Instantiate(coin, transform.position, Quaternion.identity);
+        foreach (Coin coin in coins)
+        {
+            Instantiate(coin, transform.position, Quaternion.identity);
+        }
         Delete();
     }
 
