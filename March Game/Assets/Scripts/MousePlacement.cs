@@ -50,7 +50,7 @@ public class MousePlacement : MonoBehaviour
             EventMan.what.EventPurchaseTower(); // Call EventPurchaseTower Event
         } else
         {
-            transform.position = pickupLocation;
+            transform.position = pickupLocation; // Return to pickup
         }
     }
 

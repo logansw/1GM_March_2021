@@ -12,23 +12,15 @@ public class EventMan : MonoBehaviour
         what = this; // idk what this does but you gotta do it
     }
 
-    // HOW TO MAKE AN EVENT
-    public event Action exampleAction;
-    public void EventExampleAction()
-    {
-        if (exampleAction != null) // Cleanliness - avoids error of action has no subscribers
-        {
-            exampleAction(); // EventMan yells EXAMPLEACTION to everyone
-        }
-    }
-
-
     public event Action purchaseTower;
+    // public event Action...
+    // public event Action...
+    // public event Action...
+
     public void EventPurchaseTower()
     {
         if (purchaseTower != null)
         {
-            Debug.Log("EventPurchaseTower Called");
             purchaseTower();
         }
     }
