@@ -3035,8 +3035,12 @@ MonoBehaviour:
       count: 1
   currentWaveIndex: 0
   currentWave:
-    roundNum: 0
-    marbleDelayPairs: []
+    roundNum: 1
+    marbleDelayPairs:
+    - marble: {fileID: 1001741902191753501, guid: 9b12634fc1809f7478fc2900b7b261a3,
+        type: 3}
+      delay: 0.4
+      count: 1000
   currentMarbleIndex: 0
   delay: 0
 --- !u!212 &1996602042

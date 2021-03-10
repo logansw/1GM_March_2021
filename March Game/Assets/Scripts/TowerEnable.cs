@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TowerEnable : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,10 +14,13 @@ public class TowerEnable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-/*        if (transform.parent != null)
+        if (transform.parent != null)
         {
-            GetComponent<PelletTower>().enabled = true; // Pellet tower enables when attached to a parent (peg usually).
-        }*/
+            if (transform.parent.tag == "Peghole")
+            {
+                GetComponent<PelletTower>().enabled = true; // Pellet tower enables when attached to a peghole.
+            }
+        }
     }
 
     // ENABLE AND DISABLE PELLET TOWER IN RESPONSE TO CERTAIN EVENTS

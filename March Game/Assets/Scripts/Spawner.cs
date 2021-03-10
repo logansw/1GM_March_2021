@@ -23,14 +23,14 @@ public class Spawner : MonoBehaviour
 
     public void Update()
     {
-        if (GameManager.Instance.waveState == GameManager.WaveState.LIVE)
-        {
+        //if (GameManager.Instance.waveState == GameManager.WaveState.LIVE)
+        //{
             if (delay <= 0)
             {
                 SpawnMarble();
             }
             delay -= Time.deltaTime;
-        }
+        //}
     }
 
     public void PrepareWave()
