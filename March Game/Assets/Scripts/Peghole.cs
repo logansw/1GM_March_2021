@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Peghole : MonoBehaviour
 {
-/*    private CircleCollider2D pegholeCollider;*/
+    private CircleCollider2D pegholeCollider;
 
     // Start is called before the first frame update
     void Start()
     {
         gameObject.tag = "Peghole";
-        /*        pegholeCollider = GetComponent<CircleCollider2D>();*/
+        pegholeCollider = GetComponent<CircleCollider2D>();
     }
 
     // Update is called once per frame
@@ -20,12 +20,12 @@ public class Peghole : MonoBehaviour
         // COLLIDER DISABLES WHEN IT HAS A CHILD
         // THERES SOME KIND OF GLITCH WHERE THE COLLIDER KEEPS ENABLING AND THEN DISABLING REALLY FAST
         // IDK WHY ITS DOING THAT
-/*        if (transform.childCount >= 1)
+        if (transform.childCount >= 1)
         {
             pegholeCollider.enabled = false;
         } else
         {
             pegholeCollider.enabled = true;
-        }*/
+        }
     }
 }

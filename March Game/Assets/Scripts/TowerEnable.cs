@@ -8,7 +8,7 @@ public class TowerEnable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EventMan.what.purchaseTower += purchaseTower;
+
     }
 
     // Update is called once per frame
@@ -28,10 +28,5 @@ public class TowerEnable : MonoBehaviour
     // For now, tower enables on two conditions
     // 1) Tower has been purchased
     // 2) Round is active
-    
-    private void purchaseTower()
-    {
-        Debug.Log("TowerEnable script has heard purchaseTower event");
-    }
-
+   
 }

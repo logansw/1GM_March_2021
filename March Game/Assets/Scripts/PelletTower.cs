@@ -26,6 +26,7 @@ public class PelletTower : Peg
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.tag = "Tower";
         Reload();
     }
 

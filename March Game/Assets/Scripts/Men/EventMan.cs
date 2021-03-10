@@ -12,16 +12,16 @@ public class EventMan : MonoBehaviour
         what = this; // idk what this does but you gotta do it
     }
 
-    public event Action purchaseTower;
+    // public event Action purchaseTower; // It's actually simpler when this isn't used
     // public event Action...
     // public event Action...
     // public event Action...
 
-    public void EventPurchaseTower()
+/*    public void EventPurchaseTower()
     {
         if (purchaseTower != null)
         {
             purchaseTower();
         }
-    }
+    }*/
 }

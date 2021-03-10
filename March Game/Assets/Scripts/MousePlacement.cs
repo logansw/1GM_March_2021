@@ -9,8 +9,7 @@ using UnityEngine;
 // ONTRIGGERENTER MAKES PARENT RELATIONSHIP TO PEGHOLE
 // ONTRIGGEREXIT REMOVES PARENT RELATIONSHIP TO PEGHOLE
 // IN FUTURE, THIS SCRIPT WILL PROBABLY ALSO HANDLE CLICKING ON TOWERS AND PEGS FOR UPGRADES
-// TODO
-    // RETURN TO PICKUP IF YOU DON'T PLACE ON A PEGHOLE
+
 public class MousePlacement : MonoBehaviour
 {
 
@@ -47,7 +46,6 @@ public class MousePlacement : MonoBehaviour
         {
             transform.parent = hoveringParent.transform; // Become child of peghole
             transform.position = transform.parent.position; // Snap to position
-            EventMan.what.EventPurchaseTower(); // Call EventPurchaseTower Event
         } else
         {
             transform.position = pickupLocation; // Return to pickup
