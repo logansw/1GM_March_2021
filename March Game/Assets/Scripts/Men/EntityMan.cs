@@ -7,8 +7,7 @@ using UnityEngine;
 public class EntityMan : Singleton<EntityMan>
 {
     public List<GameObject> targetsList = new List<GameObject>();
-    public List<Wave> wavesList = new List<Wave>();
-    public Spawner spawner;
+    public Spawner[] spawners;
 
     public void Start()
     {
@@ -18,19 +17,8 @@ public class EntityMan : Singleton<EntityMan>
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return)) {
-            SpawnNextWave();
+            
         }
     }
-
-    public void SpawnNextWave()
-    {
-        Wave nextWave = wavesList[GameManager.Instance.roundNumber - 1];
-        foreach(Marble marble in nextWave.marbles)
-        {
-            Instantiate(marble, spawner.transform.position, Quaternion.identity);
-        }
-    }
-
-
 
 }

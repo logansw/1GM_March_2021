@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Wave : MonoBehaviour
 {
     public int round;
-    public List<Marble> marbles = new List<Marble>();
+    [SerializeField] public List<Marble> marbles = new List<Marble>();
 }
