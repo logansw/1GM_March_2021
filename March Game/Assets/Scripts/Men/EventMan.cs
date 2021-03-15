@@ -3,13 +3,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventMan : MonoBehaviour
+public class EventMan : Singleton<EventMan>
 {
-    public static EventMan what;
+    // BRAIN NOTE: Each event should be an EVENT, so leave a comment starting with "When..."
+    //             Think of what things should happen WHEN this event occurs. These should subscribe to the event
 
-    private void Awake()
+    // When spawner finishes spawning all marbles in a wave
+    public event Action SpawnerDone;
+    public void EventSpawnerDone()
     {
-        what = this; // idk what this does but you gotta do it
+        if (SpawnerDone != null)
+            SpawnerDone();
+    }
+
+    // When the wave finishes (spawners done, no marbles on screen)
+    public event Action WaveComplete;
+    public void EventWaveComplete()
+    {
+        if (WaveComplete != null)
+            WaveComplete();
+    }
+
+    // When the next wave starts
+    public event Action NextWaveStart;
+    public void EventStartNextWave()
+    {
+        if (NextWaveStart != null)
+            NextWaveStart();
     }
 
     // public event Action purchaseTower; // It's actually simpler when this isn't used

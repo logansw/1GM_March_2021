@@ -4,34 +4,39 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public Wave[] waves;
-    public int currentWaveIndex;
-    public Wave currentWave;
-    public int currentMarbleIndex;
-    public float delay;
+    [SerializeField] private Wave[] waves;
+    private int currentWaveIndex;
+    private Wave currentWave;
+    private float delay;
+    [HideInInspector] public bool DoneSpawning { get; private set; }
 
     public Queue<Wave.MarbleDelayPair> waveContents;
 
-    public void Start()
+    #region Start/Update
+
+    private void Start()
     {
-        currentWaveIndex = 0;
-        currentWave = waves[0];
+        currentWaveIndex = -1;
         waveContents = new Queue<Wave.MarbleDelayPair>();
         delay = 0;
-        PrepareWave();
+        DoneSpawning = true;
+        EntityMan.Instance.spawners.Add(this);
+        EventMan.Instance.NextWaveStart += NextWave;
     }
 
-    public void Update()
+    private void Update()
     {
-        //if (GameManager.Instance.waveState == GameManager.WaveState.LIVE)
-        //{
+        if (GameManager.Instance.waveState == GameManager.WaveState.LIVE)
+        {
             if (delay <= 0)
             {
                 SpawnMarble();
             }
             delay -= Time.deltaTime;
-        //}
+        }
     }
+
+    #endregion
 
     public void PrepareWave()
     {
@@ -44,11 +49,16 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    public void SpawnMarble()
+
+    private void SpawnMarble()
     {
+        // If no more marbles to spawn...
         if (waveContents.Count == 0)
         {
-            GameManager.Instance.waveState = GameManager.WaveState.WAITING;
+            // ...set doneSpawning to true to stop spawning...
+            DoneSpawning = true;
+            // ...and broadcast this spawner has finished.
+            EventMan.Instance.EventSpawnerDone();
         } else
         {
             Wave.MarbleDelayPair nextMDP = waveContents.Dequeue();
@@ -58,10 +68,16 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    public void NextWave()
+    private void NextWave()
     {
-        currentWaveIndex++;
-        currentWave = waves[currentWaveIndex];
+        if (currentWaveIndex < waves.Length - 1)
+        {
+            Debug.Log("Hi");
+            currentWaveIndex++;
+            currentWave = waves[currentWaveIndex];
+            DoneSpawning = false;
+            PrepareWave();
+        }
     }
 
     [System.Serializable]
