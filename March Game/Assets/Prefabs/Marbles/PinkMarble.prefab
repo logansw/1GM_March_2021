@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8133984293876668447}
   - component: {fileID: 2844203085506481399}
   - component: {fileID: 7606321093153003893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PinkMarble
   m_TagString: Untagged
   m_Icon: {fileID: 0}

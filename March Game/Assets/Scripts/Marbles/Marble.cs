@@ -54,7 +54,8 @@ public class Marble : Entity
     {
         foreach (Coin coin in coins)
         {
-            Instantiate(coin, transform.position, Quaternion.identity);
+            Coin coinInst = Instantiate(coin, transform.position, Quaternion.identity);
+            coinInst.getRigidBody().velocity = GenRandomVector();
         }
         Delete();
     }
@@ -63,5 +64,12 @@ public class Marble : Entity
     {
         EntityMan.Instance.targetsList.Remove(gameObject);
         base.Delete();
+    }
+
+    private Vector2 GenRandomVector()
+    {
+        float x = Random.Range(-1f, 1f);
+        float y = Random.Range(-1f, 1f);
+        return new Vector2(x, y);
     }
 }

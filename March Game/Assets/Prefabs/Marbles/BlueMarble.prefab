@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2004599506917050569}
   - component: {fileID: 5496872717921147937}
   - component: {fileID: 197990725787634083}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueMarble
   m_TagString: Untagged
   m_Icon: {fileID: 0}

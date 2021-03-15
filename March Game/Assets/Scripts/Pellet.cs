@@ -6,7 +6,7 @@ public class Pellet : Entity
 {
 
     [SerializeField] protected int damage;
-    [SerializeField] protected bool isFresh; // If it hits something, it deals its damages and is no longer fresh.
+    [SerializeField] public bool isFresh; // If it hits something, it deals its damages and is no longer fresh.
     // List of pellets from parent PelletTower (change later)
     public List<Pellet> parentList;
 
@@ -31,6 +31,17 @@ public class Pellet : Entity
             isFresh = false;
             Marble marble = obj.GetComponent<Marble>();
             Debug.Log("Hit a Marble!");
+            marble.ChangeHealth(-this.damage);
+            Delete();
+        }
+    }
+
+    public void DealDamage(GameObject other)
+    {
+        if (isFresh && other.CompareTag("Marble"))
+        {
+            isFresh = false;
+            Marble marble = other.GetComponent<Marble>();
             marble.ChangeHealth(-this.damage);
             Delete();
         }

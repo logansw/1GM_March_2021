@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3132186558080334504}
   - component: {fileID: 8559458855247739287}
   - component: {fileID: 1001741902191753501}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RedMarble
   m_TagString: Untagged
   m_Icon: {fileID: 0}

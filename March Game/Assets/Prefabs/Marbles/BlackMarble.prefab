@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8847591333157520793}
   - component: {fileID: 946277826693474033}
   - component: {fileID: 5420854181696580571}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlackMarble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
