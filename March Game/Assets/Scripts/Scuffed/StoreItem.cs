@@ -31,7 +31,7 @@ public class StoreItem : MonoBehaviour
 
     private void Purchase()
     {
-        if (ResourceMan.Instance.ChangeDollars(-price))
+        if (ResourceMan.Instance.ChangePlinks(-price))
         {
             holdingTower = true;
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -43,7 +43,7 @@ public class StoreItem : MonoBehaviour
 
     private void Refund()
     {
-        ResourceMan.Instance.ChangeDollars(price);
+        ResourceMan.Instance.ChangePlinks(price);
         Destroy(towerInstance);
         towerInstance = null;
         holdingTower = false;

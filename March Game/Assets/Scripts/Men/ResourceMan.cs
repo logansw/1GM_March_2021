@@ -5,16 +5,16 @@ using UnityEngine;
 public class ResourceMan : Singleton<ResourceMan>
 {
     private const int STARTING_HEALTH = 20;
-    private const int STARTING_DOLLARS = 500;
+    private const int STARTING_PLINKS = 500;
 
     private int health;
-    private int dollars;
+    private int plinks;
 
     // Start is called before the first frame update
     void Start()
     {
         ResetHealth();
-        ResetDollars();
+        ResetPlinks();
     }
 
     // Update is called once per frame
@@ -46,24 +46,24 @@ public class ResourceMan : Singleton<ResourceMan>
         health = STARTING_HEALTH;
     }
 
-    // Attempt to change dollars by specified amount. If amount causes dollars to drop below 0,
+    // Attempt to change plinks by specified amount. If amount causes plinks to drop below 0,
     // return false and do not update. Otherwise, update and return true.
-    public bool ChangeDollars(int amount)
+    public bool ChangePlinks(int amount)
     {
-        if (dollars + amount < 0)
+        if (plinks + amount < 0)
         {
             return false;
         } else
         {
-            dollars += amount;
-            UIMan.Instance.moneyText.text = "$" + dollars;
+            plinks += amount;
+            UIMan.Instance.moneyText.text = "$" + plinks;
             return true;
         }
     }
 
-    public void ResetDollars()
+    public void ResetPlinks()
     {
-        dollars = STARTING_DOLLARS;
+        plinks = STARTING_PLINKS;
     }
 
     public int Health
@@ -79,18 +79,18 @@ public class ResourceMan : Singleton<ResourceMan>
         }
     }
 
-    public int Dollars
+    public int Plinks
     {
         get
         {
-            return dollars;
+            return plinks;
         }
 
         set
         {
             if (value >= 0)
             {
-                dollars = value;
+                plinks = value;
             }
         }
     }

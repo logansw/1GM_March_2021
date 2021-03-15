@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 6727572895421889670}
   - component: {fileID: 8989413437201482638}
   - component: {fileID: -8312287697881345791}
+  - component: {fileID: -1287150670605237675}
   m_Layer: 0
   m_Name: PelletTower
   m_TagString: Untagged
@@ -249,3 +250,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8903e1630a30aff43bda929f613ca450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1287150670605237675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727572895421889671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 100

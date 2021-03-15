@@ -44,11 +44,10 @@ public class MousePlacement : MonoBehaviour
     {
         if (hoveringParent != null)
         {
-            transform.parent = hoveringParent.transform; // Become child of peghole
-            transform.position = transform.parent.position; // Snap to position
+            purchase();
         } else
         {
-            transform.position = pickupLocation; // Return to pickup
+            returnToPickup();
         }
     }
 
@@ -63,6 +62,33 @@ public class MousePlacement : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         hoveringParent = null; // Let go of Collider2D we were holding
+    }
+
+    // Lots of purchasing logic. Should consider movind to "Item" script
+    private void purchase()
+    {
+        // Get plinks and item cost
+        int plinks = ResourceMan.Instance.Plinks;
+        Item item = gameObject.GetComponent<Item>();
+        int cost = item.cost;
+        if (plinks >= cost)
+        {
+            transform.parent = hoveringParent.transform; // Become child of peghole
+            transform.position = transform.parent.position; // Snap to position
+            if (item.wasPurchased == false)
+            {
+                ResourceMan.Instance.ChangePlinks(-cost); // Update Plinks
+                item.wasPurchased = true;
+            }
+        } else
+        {
+            returnToPickup();
+        }
+    }
+
+    private void returnToPickup()
+    {
+        transform.position = pickupLocation; // Return to pickup
     }
 
 }

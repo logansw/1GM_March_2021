@@ -23,7 +23,7 @@ public class Bucket : Entity
         if (obj.CompareTag("Coin"))
         {
             Coin coin = obj.GetComponent<Coin>();
-            ResourceMan.Instance.ChangeDollars(coin.getValue());
+            ResourceMan.Instance.ChangePlinks(coin.getValue());
             coin.Delete();
         } else if (obj.CompareTag("Marble"))
         {
