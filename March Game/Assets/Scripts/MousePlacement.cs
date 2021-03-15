@@ -69,7 +69,7 @@ public class MousePlacement : MonoBehaviour
     {
         // Get plinks and item cost
         int plinks = ResourceMan.Instance.Plinks;
-        Item item = gameObject.GetComponent<Item>();
+        Item item = gameObject.GetComponent<Item>(); // GET ITEM INFORMATION AT START CUZ IT DOESNT CHANGE
         int cost = item.cost;
         if (plinks >= cost)
         {
