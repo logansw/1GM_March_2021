@@ -2,30 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// THIS SCRIPT HANDLES DRAGGING OBJECTS AROUND
-// NAMELY TOWERS AND PEGS
-// ONMOUSEDRAG LETS YOU DRAG THINGS
-// ONMOUSEUP SNAPS TRANSFORM TO PEGHOLE
-// ONTRIGGERENTER MAKES PARENT RELATIONSHIP TO PEGHOLE
-// ONTRIGGEREXIT REMOVES PARENT RELATIONSHIP TO PEGHOLE
-// IN FUTURE, THIS SCRIPT WILL PROBABLY ALSO HANDLE CLICKING ON TOWERS AND PEGS FOR UPGRADES
-
+// Handles dragging functionality
 public class MousePlacement : MonoBehaviour
 {
 
     private Vector3 pickupLocation;
     private Collider2D hoveringParent;
+    private Item item; // Route to Item script
 
     // Start is called before the first frame update
     void Start()
     {
         hoveringParent = null;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        item = gameObject.GetComponent<Item>();
     }
 
     private void OnMouseDown()
@@ -42,9 +31,10 @@ public class MousePlacement : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (hoveringParent != null)
+        if (hoveringParent != null && item.IsBuyable()) // Hovering peg and buyable
         {
-            purchase();
+            transform.parent = hoveringParent.transform; // Become child of peghole
+            transform.position = transform.parent.position; // Snap to position
         } else
         {
             returnToPickup();
@@ -62,28 +52,6 @@ public class MousePlacement : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         hoveringParent = null; // Let go of Collider2D we were holding
-    }
-
-    // Lots of purchasing logic. Should consider movind to "Item" script
-    private void purchase()
-    {
-        // Get plinks and item cost
-        int plinks = ResourceMan.Instance.Plinks;
-        Item item = gameObject.GetComponent<Item>(); // GET ITEM INFORMATION AT START CUZ IT DOESNT CHANGE
-        int cost = item.cost;
-        if (plinks >= cost)
-        {
-            transform.parent = hoveringParent.transform; // Become child of peghole
-            transform.position = transform.parent.position; // Snap to position
-            if (item.wasPurchased == false)
-            {
-                ResourceMan.Instance.ChangePlinks(-cost); // Update Plinks
-                item.wasPurchased = true;
-            }
-        } else
-        {
-            returnToPickup();
-        }
     }
 
     private void returnToPickup()
