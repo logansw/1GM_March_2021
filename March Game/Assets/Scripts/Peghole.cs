@@ -6,6 +6,7 @@ using UnityEngine;
 public class Peghole : MonoBehaviour
 {
     private CircleCollider2D pegholeCollider;
+    [SerializeField] private GameObject shopZero;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +24,15 @@ public class Peghole : MonoBehaviour
         if (transform.childCount >= 1)
         {
             pegholeCollider.enabled = false;
-        } else
+        }
+        else
         {
             pegholeCollider.enabled = true;
         }
+    }
+
+    private void OnMouseDown()
+    {
+        UIMan.Instance.OpenPopup(shopZero, transform);
     }
 }

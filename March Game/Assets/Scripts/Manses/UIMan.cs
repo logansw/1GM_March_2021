@@ -8,7 +8,7 @@ public class UIMan : Singleton<UIMan>
     public Text moneyText;
     public RectTransform towerSelect;
     public Canvas canvas;
-    public RectTransform currPopup;
+    public GameObject currPopup = null;
 
     // Start is called before the first frame update
     void Start()
@@ -25,18 +25,20 @@ public class UIMan : Singleton<UIMan>
     // TODO:
     // Change the Popup from a UI element on the canvas to a regular GameObject with a collider
     // Go through ClickMan to detect which type of tower is selected and whatnot
-    public void PositionElement(RectTransform rectTransform, Vector2 position)
+
+    public void OpenPopup(GameObject popup, Transform parent)
     {
-        Vector2 viewportPoint = Camera.main.WorldToViewportPoint(position);
-        rectTransform.anchorMin = viewportPoint;
-        rectTransform.anchorMax = viewportPoint;
+        Debug.Log("Opening Popup");
+        ClosePopup();
+        currPopup = Instantiate(popup, parent.position, Quaternion.identity);
+        currPopup.transform.SetParent(parent);
     }
 
     public void ClosePopup()
-    {
+    { 
         if (currPopup != null)
         {
-            Destroy(currPopup.gameObject);
+            Destroy(currPopup);
             currPopup = null;
         }
     }
