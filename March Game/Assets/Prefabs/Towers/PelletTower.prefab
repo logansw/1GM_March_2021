@@ -221,11 +221,14 @@ MonoBehaviour:
   sp: {fileID: 6727572895421889691}
   col: {fileID: 6727572895421889689}
   rb: {fileID: 6727572895421889670}
-  towerDisabled: 0
-  cost: 1
-  target: {fileID: 0}
+  cost: 100
+  reloadTime: 0.8
+  fireSpeed: 10
+  pelletDamage: 1
+  maxRange: 50
   pellet: {fileID: 3221937547889080557, guid: 574e3106da48ba443b452d742a8bd8f7, type: 3}
   barrel: {fileID: 6727572893646163345}
+  towerPopupOne: {fileID: 0}
 --- !u!114 &8989413437201482638
 MonoBehaviour:
   m_ObjectHideFlags: 0

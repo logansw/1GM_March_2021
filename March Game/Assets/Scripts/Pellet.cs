@@ -11,32 +11,18 @@ public class Pellet : Entity
     public List<Pellet> parentList;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         gameObject.tag = "Pellet";
         isFresh = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetDamage(int damage)
     {
-        
+        this.damage = damage;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        GameObject obj = collision.collider.gameObject;
-        if (isFresh && obj.CompareTag("Marble"))
-        {
-            isFresh = false;
-            Marble marble = obj.GetComponent<Marble>();
-            Debug.Log("Hit a Marble!");
-            marble.ChangeHealth(-this.damage);
-            Delete();
-        }
-    }
-
-    public void DealDamage(GameObject other)
+    public virtual void DealDamage(GameObject other)
     {
         if (isFresh && other.CompareTag("Marble"))
         {
