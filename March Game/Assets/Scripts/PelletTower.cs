@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PelletTower : Peg
+public class PelletTower : Entity
 {
     // Minimum time between consecutive shots
     private const float RELOAD_TIME = 0.5f;
     // Maximum number of live pellets from this tower
     private const int PELLET_CAPACITY = 3;
+    // Controls on/off state between rounds
+    private bool towerDisabled;
 
     // Nearest targetable object
     [SerializeField] private GameObject target;
