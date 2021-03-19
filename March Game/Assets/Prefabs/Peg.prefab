@@ -101,7 +101,6 @@ MonoBehaviour:
   sp: {fileID: 643969829134445980}
   col: {fileID: 5983739754931030058}
   rb: {fileID: 865084493640777632}
-  cost: 0
   towerDisabled: 0
 --- !u!58 &5983739754931030058
 CircleCollider2D:
