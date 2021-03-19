@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Handles dragging functionality
+// Will be deleted later
 public class MousePlacement : MonoBehaviour
 {
 
