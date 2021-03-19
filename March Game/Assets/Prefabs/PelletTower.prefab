@@ -91,9 +91,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6727572895421889690}
   - component: {fileID: 6727572895421889691}
-  - component: {fileID: 6727572895421889688}
   - component: {fileID: 6727572895421889689}
   - component: {fileID: 6727572895421889670}
+  - component: {fileID: 6727572895421889688}
   - component: {fileID: 8989413437201482638}
   - component: {fileID: -8312287697881345791}
   - component: {fileID: -1287150670605237675}
@@ -169,26 +169,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6727572895421889688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6727572895421889671}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de487fcda1412f342aa72adc3e5ddab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sp: {fileID: 6727572895421889691}
-  col: {fileID: 6727572895421889689}
-  rb: {fileID: 6727572895421889670}
-  cost: 1
-  towerDisabled: 0
-  target: {fileID: 0}
-  pellet: {fileID: 3221937547889080557, guid: 574e3106da48ba443b452d742a8bd8f7, type: 3}
-  barrel: {fileID: 6727572893646163345}
 --- !u!58 &6727572895421889689
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -226,6 +206,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6727572895421889688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727572895421889671}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de487fcda1412f342aa72adc3e5ddab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sp: {fileID: 6727572895421889691}
+  col: {fileID: 6727572895421889689}
+  rb: {fileID: 6727572895421889670}
+  towerDisabled: 0
+  cost: 1
+  target: {fileID: 0}
+  pellet: {fileID: 3221937547889080557, guid: 574e3106da48ba443b452d742a8bd8f7, type: 3}
+  barrel: {fileID: 6727572893646163345}
 --- !u!114 &8989413437201482638
 MonoBehaviour:
   m_ObjectHideFlags: 0

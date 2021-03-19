@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Peg : Entity
 {
-    public bool towerDisabled;
+    public int cost;
 
     private void Start()
     {
         gameObject.tag = "Peg";
     }
+
 }
