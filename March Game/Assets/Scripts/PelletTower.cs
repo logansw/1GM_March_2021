@@ -46,6 +46,7 @@ public class PelletTower : Entity
             if (target != null)
             {
                 AimTowards(target);
+                // LeadTarget(target);
             }
             // Update timer
             reloadTimer -= Time.deltaTime;
@@ -99,6 +100,12 @@ public class PelletTower : Entity
         Vector3 direction = target.transform.position - transform.position;
         direction.z = 0;
         transform.up = direction;
+    }
+
+    protected void LeadTarget(GameObject target)
+    {
+        // target
+        Vector2 velocity = target.GetComponent<Rigidbody>().velocity;
     }
 
     public void EnableTower()
