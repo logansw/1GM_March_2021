@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3862850677254502441
+--- !u!1 &4947435414698747604
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,14 +8,14 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3862850677254502417}
-  - component: {fileID: 3862850677254502416}
-  - component: {fileID: 3862850677254502447}
-  - component: {fileID: 3862850677254502446}
-  - component: {fileID: 3862850677254502445}
-  - component: {fileID: 3862850677254502444}
-  - component: {fileID: 3862850677254502443}
-  - component: {fileID: 3862850677254502442}
+  - component: {fileID: 4947435414698747628}
+  - component: {fileID: 4947435414698747629}
+  - component: {fileID: 4947435414698747602}
+  - component: {fileID: 4947435414698747603}
+  - component: {fileID: 4947435414698747600}
+  - component: {fileID: 4947435414698747601}
+  - component: {fileID: 4947435414698747606}
+  - component: {fileID: 4947435414698747607}
   m_Layer: 0
   m_Name: Brick Tower
   m_TagString: Untagged
@@ -23,28 +23,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3862850677254502417
+--- !u!4 &4947435414698747628
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3862850677254502441}
+  m_GameObject: {fileID: 4947435414698747604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15.91, y: -13.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3862850679242297050}
+  - {fileID: 4947435416420798503}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3862850677254502416
+--- !u!212 &4947435414698747629
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3862850677254502441}
+  m_GameObject: {fileID: 4947435414698747604}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -88,13 +88,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &3862850677254502447
+--- !u!58 &4947435414698747602
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3862850677254502441}
+  m_GameObject: {fileID: 4947435414698747604}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 85269892f1e978547aacfc03b9342615, type: 2}
@@ -104,14 +104,14 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!50 &3862850677254502446
+--- !u!50 &4947435414698747603
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3862850677254502441}
+  m_GameObject: {fileID: 4947435414698747604}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -125,66 +125,66 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3862850677254502445
+--- !u!114 &4947435414698747600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3862850677254502441}
+  m_GameObject: {fileID: 4947435414698747604}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de487fcda1412f342aa72adc3e5ddab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sp: {fileID: 3862850677254502416}
-  col: {fileID: 3862850677254502447}
-  rb: {fileID: 3862850677254502446}
+  sp: {fileID: 4947435414698747629}
+  col: {fileID: 4947435414698747602}
+  rb: {fileID: 4947435414698747603}
   cost: 40
-  reloadTime: 0.5
-  fireSpeed: 50
+  reloadTime: 0.75
+  fireSpeed: 15
   pelletDamage: 1
   maxRange: 30
   pellet: {fileID: 2963756944459376721, guid: 3146a157a9cb1f74aa184cd3fc059760, type: 3}
-  barrel: {fileID: 3862850679242297048}
---- !u!114 &3862850677254502444
+  barrel: {fileID: 4947435416420798501}
+--- !u!114 &4947435414698747601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3862850677254502441}
+  m_GameObject: {fileID: 4947435414698747604}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c29a8f0139fa4b741a57c99ea1dcc821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3862850677254502443
+--- !u!114 &4947435414698747606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3862850677254502441}
+  m_GameObject: {fileID: 4947435414698747604}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8903e1630a30aff43bda929f613ca450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3862850677254502442
+--- !u!114 &4947435414698747607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3862850677254502441}
+  m_GameObject: {fileID: 4947435414698747604}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 100
---- !u!1 &3862850679242297048
+--- !u!1 &4947435416420798501
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,8 +192,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3862850679242297050}
-  - component: {fileID: 3862850679242297049}
+  - component: {fileID: 4947435416420798503}
+  - component: {fileID: 4947435416420798500}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -201,27 +201,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3862850679242297050
+--- !u!4 &4947435416420798503
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3862850679242297048}
+  m_GameObject: {fileID: 4947435416420798501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.695, z: 0}
   m_LocalScale: {x: 0.53027916, y: 0.5394888, z: 1}
   m_Children: []
-  m_Father: {fileID: 3862850677254502417}
+  m_Father: {fileID: 4947435414698747628}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3862850679242297049
+--- !u!212 &4947435416420798500
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3862850679242297048}
+  m_GameObject: {fileID: 4947435416420798501}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

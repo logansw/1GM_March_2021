@@ -31,6 +31,7 @@ public class BrickPellet : Pellet
         {
             Marble marble = other.GetComponent<Marble>();
             marble.ChangeHealth(-this.damage);
+            Delete();
         }
     }
 }

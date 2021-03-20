@@ -37,7 +37,7 @@ public class PelletTower : Entity
     }
 
     // Update is called once per frame
-    protected void Update()
+    protected virtual void Update()
     {
         if (!towerDisabled)
         {

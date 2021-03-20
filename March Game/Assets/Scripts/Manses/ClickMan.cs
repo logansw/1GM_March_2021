@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClickMan : MonoBehaviour
 {
     [SerializeField] private GameObject popupOne;
+    [SerializeField] private GameObject marble;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,11 @@ public class ClickMan : MonoBehaviour
                 Debug.Log("Clicked nothing, closing");
                 UIMan.Instance.ClosePopup();
             }
+        } else if (Input.GetMouseButtonDown(1))
+        {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+            Instantiate(marble, mousePos2D, Quaternion.identity);
         }
     }
 }
