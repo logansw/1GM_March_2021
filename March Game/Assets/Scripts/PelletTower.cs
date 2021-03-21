@@ -45,8 +45,8 @@ public class PelletTower : Entity
             target = AcquireTarget();
             if (target != null)
             {
-                AimTowards(target);
-                // LeadTarget(target);
+                // AimTowards(target);
+                LeadTarget(target);
             }
             // Update timer
             reloadTimer -= Time.deltaTime;
@@ -105,7 +105,17 @@ public class PelletTower : Entity
     protected void LeadTarget(GameObject target)
     {
         // target
-        Vector2 velocity = target.GetComponent<Rigidbody>().velocity;
+        Vector3 velocity = target.GetComponent<Rigidbody2D>().velocity;
+        float dist1 = (target.transform.position - transform.position).magnitude;
+        float t1 = dist1 / fireSpeed;
+        Vector3 pos1 = target.transform.position + velocity * t1 - 0.5f*t1*t1*Physics.gravity;
+        float dist2 = (pos1 - transform.position).magnitude;
+        float t2 = dist2 / fireSpeed;
+        Vector3 pos2 = target.transform.position + velocity * t2;
+
+        Vector3 direction = pos2 - transform.position;
+        direction.z = 0;
+        transform.up = direction;
     }
 
     public void EnableTower()
