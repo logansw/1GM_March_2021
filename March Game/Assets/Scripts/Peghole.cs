@@ -5,29 +5,28 @@ using UnityEngine;
 
 public class Peghole : MonoBehaviour
 {
-    private CircleCollider2D pegholeCollider;
+    [SerializeField] protected SpriteRenderer sp;
+    [SerializeField] protected Collider2D col;
     [SerializeField] private GameObject shopZero;
 
     // Start is called before the first frame update
     void Start()
     {
         gameObject.tag = "Peghole";
-        pegholeCollider = GetComponent<CircleCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // COLLIDER DISABLES WHEN IT HAS A CHILD
-        // THERES SOME KIND OF GLITCH WHERE THE COLLIDER KEEPS ENABLING AND THEN DISABLING REALLY FAST
-        // IDK WHY ITS DOING THAT
         if (transform.childCount >= 1)
         {
-            pegholeCollider.enabled = false;
+            col.enabled = false;
+            sp.enabled = false;
         }
         else
         {
-            pegholeCollider.enabled = true;
+            col.enabled = true;
+            sp.enabled = true;
         }
     }
 
