@@ -32,14 +32,14 @@ public class MousePlacement : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (hoveringParent != null && item.IsBuyable()) // Hovering peg and buyable
+        /*if (hoveringParent != null && item.IsBuyable()) // Hovering peg and buyable
         {
             transform.parent = hoveringParent.transform; // Become child of peghole
             transform.position = transform.parent.position; // Snap to position
         } else
         {
             returnToPickup();
-        }
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

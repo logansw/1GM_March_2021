@@ -94,9 +94,8 @@ GameObject:
   - component: {fileID: 6727572895421889689}
   - component: {fileID: 6727572895421889670}
   - component: {fileID: 6727572895421889688}
-  - component: {fileID: 8989413437201482638}
   - component: {fileID: -8312287697881345791}
-  - component: {fileID: -1287150670605237675}
+  - component: {fileID: 976913448706024499}
   m_Layer: 0
   m_Name: PelletTower
   m_TagString: Untagged
@@ -228,19 +227,6 @@ MonoBehaviour:
   maxRange: 50
   pellet: {fileID: 3221937547889080557, guid: 574e3106da48ba443b452d742a8bd8f7, type: 3}
   barrel: {fileID: 6727572893646163345}
-  towerPopupOne: {fileID: 0}
---- !u!114 &8989413437201482638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6727572895421889671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29a8f0139fa4b741a57c99ea1dcc821, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-8312287697881345791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8903e1630a30aff43bda929f613ca450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-1287150670605237675
+--- !u!114 &976913448706024499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,7 +248,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6727572895421889671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 67bf7d2bfb3d89c4eb78864593a2dcf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 100
+  shopPopup: {fileID: 6706486765656020605, guid: 735d3ea725f57e848bfd13028895ff59,
+    type: 3}
