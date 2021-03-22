@@ -55,7 +55,7 @@ public class Marble : Entity
         foreach (Coin coin in coins)
         {
             Coin coinInst = Instantiate(coin, transform.position, Quaternion.identity);
-            coinInst.getRigidBody().velocity = GenRandomVector();
+            coinInst.getRigidBody().velocity = GenRandomVector() * 3 + rb.velocity;
         }
         Delete();
     }
