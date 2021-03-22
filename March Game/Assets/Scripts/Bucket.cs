@@ -30,7 +30,7 @@ public class Bucket : Entity
         {
             Marble marble = obj.GetComponent<Marble>();
             ResourceMan.Instance.ChangeHealth(-marble.getDamage() * multiplier);
-            Debug.Log("Marble: " + marble.getDamage());
+            Debug.Log("Marble: " + marble.getDamage() * multiplier);
             marble.Delete();
             if (!ResourceMan.Instance.CheckHealth())
             {

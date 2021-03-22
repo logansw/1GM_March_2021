@@ -154,6 +154,7 @@ MonoBehaviour:
   col: {fileID: 7366749049134975001}
   rb: {fileID: 7366749049134975000}
   cost: 0
+  multiplier: 1
 --- !u!212 &7366749049134975007
 SpriteRenderer:
   m_ObjectHideFlags: 0
