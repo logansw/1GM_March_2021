@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bucket : Entity
 {
+    [SerializeField] protected int multiplier;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +24,12 @@ public class Bucket : Entity
         if (obj.CompareTag("Coin"))
         {
             Coin coin = obj.GetComponent<Coin>();
-            ResourceMan.Instance.ChangePlinks(coin.getValue());
+            ResourceMan.Instance.ChangePlinks(coin.getValue() * multiplier);
             coin.Delete();
         } else if (obj.CompareTag("Marble"))
         {
             Marble marble = obj.GetComponent<Marble>();
-            ResourceMan.Instance.ChangeHealth(-marble.getDamage());
+            ResourceMan.Instance.ChangeHealth(-marble.getDamage() * multiplier);
             Debug.Log("Marble: " + marble.getDamage());
             marble.Delete();
             if (!ResourceMan.Instance.CheckHealth())
