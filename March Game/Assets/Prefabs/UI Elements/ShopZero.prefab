@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 2504531014391672963}
   - component: {fileID: 179767040823514190}
   - component: {fileID: 9221792915951551256}
+  - component: {fileID: 3529355533411882924}
   m_Layer: 12
   m_Name: Peg
   m_TagString: Untagged
@@ -130,6 +131,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3529355533411882924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4017944876501059826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 50
+  structurePrefab: {fileID: 6424831468356906725, guid: 5c972a50af857814598ac476e45920f1,
+    type: 3}
 --- !u!1 &4657882364219332938
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,6 +157,7 @@ GameObject:
   - component: {fileID: 4657882364219332981}
   - component: {fileID: 4657882364219332980}
   - component: {fileID: 4657882364219332939}
+  - component: {fileID: 4139871698360803869}
   m_Layer: 12
   m_Name: Tower
   m_TagString: Untagged
@@ -228,3 +245,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4139871698360803869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4657882364219332938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 100
+  structurePrefab: {fileID: 6727572895421889688, guid: 2874652f7ee07624b94e344f1012b532,
+    type: 3}

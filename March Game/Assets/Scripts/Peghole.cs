@@ -7,7 +7,6 @@ public class Peghole : MonoBehaviour
 {
     [SerializeField] protected SpriteRenderer sp;
     [SerializeField] protected Collider2D col;
-    [SerializeField] private GameObject shopZero;
 
     // Start is called before the first frame update
     void Start()
@@ -20,18 +19,17 @@ public class Peghole : MonoBehaviour
     {
         if (transform.childCount >= 1)
         {
-            // col.enabled = false;
-            sp.enabled = false;
+            GameObject child = transform.GetChild(0).gameObject;
+            if (child.CompareTag("Peg") || child.CompareTag("Tower"))
+            {
+                col.enabled = false;
+                sp.enabled = false;
+            }
         }
         else
         {
-            // col.enabled = true;
+            col.enabled = true;
             sp.enabled = true;
         }
-    }
-
-    private void OnMouseDown()
-    {
-        UIMan.Instance.OpenPopup(shopZero, transform);
     }
 }

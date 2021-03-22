@@ -6,6 +6,8 @@ public class Item : MonoBehaviour
 {
     public int cost;
     private bool wasPurchased;
+    [SerializeField] private Entity structurePrefab;
+
 
     // Start is called before the first frame update
     void Start()
@@ -13,6 +15,7 @@ public class Item : MonoBehaviour
         wasPurchased = false;
     }
 
+    /*
     // Lots of purchasing logic. Should consider moving to "Item" script
     // Return true if purchase works, return false if purchase fails
     public bool IsBuyable()
@@ -32,6 +35,19 @@ public class Item : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+    */
+
+    private void OnMouseDown()
+    {
+        Debug.Log("Check purchase");
+        if (ResourceMan.Instance.Plinks >= cost)
+        {
+            ResourceMan.Instance.ChangePlinks(-cost);   // Update Plinks
+            Entity structure = Instantiate(structurePrefab, transform.parent.position, Quaternion.identity);
+            structure.transform.SetParent(transform.parent.parent);
+            UIMan.Instance.ClosePopup();
         }
     }
 

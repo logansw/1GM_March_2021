@@ -27,7 +27,11 @@ public class ClickMan : MonoBehaviour
             {
                 Debug.Log("Clicked nothing, closing");
                 UIMan.Instance.ClosePopup();
+            } else
+            {
+                Debug.Log(hit.collider.gameObject.name);
             }
+
         } else if (Input.GetMouseButtonDown(1))
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

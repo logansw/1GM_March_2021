@@ -13,6 +13,7 @@ public class BellPeg : Peg
 
     protected override void Start()
     {
+        base.Start();
         MaxSize = 5f;
         Damage = 1;
     }
