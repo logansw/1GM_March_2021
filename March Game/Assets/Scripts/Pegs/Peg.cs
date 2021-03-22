@@ -6,7 +6,7 @@ public class Peg : Entity
 {
     public int cost;
 
-    private void Start()
+    protected virtual void Start()
     {
         gameObject.tag = "Peg";
     }
