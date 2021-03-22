@@ -12,6 +12,7 @@ public class Shockwave : MonoBehaviour
 
     private float size;
     private float timer;
+    private HashSet<GameObject> hitSet;
 
     [SerializeField] private BellPeg bellPeg;
 
@@ -20,6 +21,7 @@ public class Shockwave : MonoBehaviour
         size = 1f;
         transform.localScale = new Vector2(size, size);
         timer = 0;
+        hitSet = new HashSet<GameObject>();
     }
 
     // Update is called once per frame
@@ -46,14 +48,15 @@ public class Shockwave : MonoBehaviour
 
     public float easeOutExpo(float x)
     {
-        return x == 1 ? 1 : 0.8f * (1 - Mathf.Pow(2, -7 * x)) + 0.2f;
+        return x == 1 ? 1 : 0.5f * (1 - Mathf.Pow(2, -7 * x)) + 0.5f;
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Marble"))
+        if (collision.gameObject.CompareTag("Marble") && !hitSet.Contains(collision.gameObject))
         {
             Marble marble = collision.gameObject.GetComponent<Marble>();
+            hitSet.Add(collision.gameObject);
             marble.ChangeHealth(-bellPeg.Damage);
         }
     }

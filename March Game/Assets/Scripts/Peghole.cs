@@ -20,12 +20,12 @@ public class Peghole : MonoBehaviour
     {
         if (transform.childCount >= 1)
         {
-            col.enabled = false;
+            // col.enabled = false;
             sp.enabled = false;
         }
         else
         {
-            col.enabled = true;
+            // col.enabled = true;
             sp.enabled = true;
         }
     }
