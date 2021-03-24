@@ -90,7 +90,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2ac2128dd827f274382e76c3e19300f1, type: 3}
-  m_Color: {r: 1, g: 0.56078434, b: 0.94117653, a: 1}
+  m_Color: {r: 0.42352942, g: 0.9764706, b: 0.8745098, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -226,7 +226,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2ac2128dd827f274382e76c3e19300f1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4117647, g: 0.21568628, b: 0.9607843, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -282,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6877354365101271120}
   m_Layer: 12
-  m_Name: ShopTower
+  m_Name: ShopTowerII
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -397,7 +397,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2ac2128dd827f274382e76c3e19300f1, type: 3}
-  m_Color: {r: 1, g: 0.098039225, b: 0.49411768, a: 1}
+  m_Color: {r: 0.9372549, g: 0.36078432, b: 0.63529414, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -533,7 +533,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2ac2128dd827f274382e76c3e19300f1, type: 3}
-  m_Color: {r: 1, g: 0.6862745, b: 0.098039225, a: 1}
+  m_Color: {r: 0.7529412, g: 0.1764706, b: 0.34901962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -669,7 +669,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2ac2128dd827f274382e76c3e19300f1, type: 3}
-  m_Color: {r: 0.8588236, g: 0.11764707, b: 0.19215688, a: 1}
+  m_Color: {r: 1, g: 0.69803923, b: 0.41960785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
