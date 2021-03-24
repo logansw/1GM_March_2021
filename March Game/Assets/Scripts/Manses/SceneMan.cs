@@ -24,7 +24,9 @@ public class SceneMan : Singleton<SceneMan>
                 if (tile.name == "Peghole Sprite")
                 {
                     tm.SetTile(position, null);
-                    Instantiate(peghole, gridLayout.CellToLocal(position), Quaternion.identity, pegholeFolder.transform);
+                    Vector3 worldPos = gridLayout.CellToLocal(position);
+                    worldPos.z = 1;
+                    Instantiate(peghole, worldPos, Quaternion.identity, pegholeFolder.transform);
                 }
                 // Instantiate other objects here if needed
                 // if (tile.name == "")...
