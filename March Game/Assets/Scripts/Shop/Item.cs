@@ -6,13 +6,14 @@ public class Item : MonoBehaviour
 {
     public int cost;
     private bool wasPurchased;
-    [SerializeField] private Entity structurePrefab;
-
+    [SerializeField] private GameObject structurePrefab;
+    private GameObject selectedEntity;
 
     // Start is called before the first frame update
     void Start()
     {
         wasPurchased = false;
+        selectedEntity = transform.parent.parent.gameObject;
     }
 
     /*
@@ -39,16 +40,32 @@ public class Item : MonoBehaviour
     }
     */
 
+    /*    private void OnMouseDown()
+        {
+            Debug.Log("Check purchase");
+            if (ResourceMan.Instance.Plinks >= cost)
+            {
+                ResourceMan.Instance.ChangePlinks(-cost);   // Update Plinks
+                Entity structure = Instantiate(structurePrefab, transform.parent.position, Quaternion.identity);
+                structure.transform.SetParent(transform.parent.parent);
+                UIMan.Instance.ClosePopup();
+            }
+        }*/
+
     private void OnMouseDown()
     {
-        Debug.Log("Check purchase");
+        Debug.Log(ResourceMan.Instance.Plinks);
         if (ResourceMan.Instance.Plinks >= cost)
         {
-            ResourceMan.Instance.ChangePlinks(-cost);   // Update Plinks
-            Entity structure = Instantiate(structurePrefab, transform.parent.position, Quaternion.identity);
-            structure.transform.SetParent(transform.parent.parent);
+            Debug.Log("Hello");
+            ResourceMan.Instance.ChangePlinks(-cost);
+            GameObject structure = Instantiate(structurePrefab, transform.parent.position, Quaternion.identity);
+            Debug.Log(selectedEntity);
+            Debug.Log(structure);
+            // ShopMan.Instance.ReplaceObjects(selectedEntity, structure);
+            structure.transform.position = selectedEntity.transform.position;
+            Destroy(selectedEntity);
             UIMan.Instance.ClosePopup();
         }
     }
-
 }

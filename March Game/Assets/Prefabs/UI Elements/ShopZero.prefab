@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 50
-  structurePrefab: {fileID: 6424831468356906725, guid: 5c972a50af857814598ac476e45920f1,
+  structurePrefab: {fileID: 8888735180459756375, guid: 5c972a50af857814598ac476e45920f1,
     type: 3}
 --- !u!1 &4657882364219332938
 GameObject:
@@ -258,5 +258,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 100
-  structurePrefab: {fileID: 6727572895421889688, guid: 2874652f7ee07624b94e344f1012b532,
+  structurePrefab: {fileID: 6727572895421889671, guid: 2874652f7ee07624b94e344f1012b532,
     type: 3}

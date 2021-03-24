@@ -94,9 +94,7 @@ GameObject:
   - component: {fileID: 4927949336144054082}
   - component: {fileID: 4927949336144054109}
   - component: {fileID: 4927949336144054083}
-  - component: {fileID: 7349447758225569877}
   - component: {fileID: 1556669088069659354}
-  - component: {fileID: 8583204894884542862}
   m_Layer: 0
   m_Name: Heavy Pellet Tower
   m_TagString: Untagged
@@ -228,18 +226,6 @@ MonoBehaviour:
   maxRange: 50
   pellet: {fileID: -7232131796433518000, guid: 298dcce0b44b8634dab528ee801a09d2, type: 3}
   barrel: {fileID: 4927949335364400714}
---- !u!114 &7349447758225569877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4927949336144054108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29a8f0139fa4b741a57c99ea1dcc821, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1556669088069659354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,16 +238,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8903e1630a30aff43bda929f613ca450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8583204894884542862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4927949336144054108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 100

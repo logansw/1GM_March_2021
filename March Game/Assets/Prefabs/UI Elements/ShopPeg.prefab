@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 150
-  structurePrefab: {fileID: 1499838689779716415, guid: 44b3b10240840b0449d05c8e5e71b82e,
+  structurePrefab: {fileID: 1499838689779716387, guid: 44b3b10240840b0449d05c8e5e71b82e,
     type: 3}
 --- !u!1 &297097584259093935
 GameObject:
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 150
-  structurePrefab: {fileID: 7769699968628373845, guid: 7678f17169ff568408e70aacd27f9ba4,
+  structurePrefab: {fileID: 7769699968628373851, guid: 7678f17169ff568408e70aacd27f9ba4,
     type: 3}
 --- !u!1 &8372116448562054396
 GameObject:
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 150
-  structurePrefab: {fileID: 5139537165090555164, guid: 83249674f586e774f8c11f2f3e3d4192,
+  structurePrefab: {fileID: 5139537165090555152, guid: 83249674f586e774f8c11f2f3e3d4192,
     type: 3}
 --- !u!1 &8561814085760648333
 GameObject:
@@ -488,5 +488,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 150
-  structurePrefab: {fileID: 7366749049134975002, guid: d145431db02c9fc428c36d59d563dc1b,
+  structurePrefab: {fileID: 7366749049134975005, guid: d145431db02c9fc428c36d59d563dc1b,
     type: 3}
