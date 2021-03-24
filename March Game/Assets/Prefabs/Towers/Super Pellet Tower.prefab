@@ -172,5 +172,5 @@ MonoBehaviour:
   fireSpeed: 15
   pelletDamage: 2
   maxRange: 100
-  pellet: {fileID: 3221937547889080557, guid: 574e3106da48ba443b452d742a8bd8f7, type: 3}
+  pellet: {fileID: 6665263430766088613, guid: e608556067f386a49b9cc8438523c5ab, type: 3}
   barrel: {fileID: 5226293377694273287}

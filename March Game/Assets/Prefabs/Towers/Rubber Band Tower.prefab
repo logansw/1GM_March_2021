@@ -172,7 +172,7 @@ MonoBehaviour:
   fireSpeed: 0
   pelletDamage: 0
   maxRange: 0
-  pellet: {fileID: 3221937547889080557, guid: 574e3106da48ba443b452d742a8bd8f7, type: 3}
+  pellet: {fileID: 2685701026289662548, guid: d9282028a35ae6146b9f996c6295fa7c, type: 3}
   barrel: {fileID: 8548173201704574190}
   fireSpeeds:
   - 10

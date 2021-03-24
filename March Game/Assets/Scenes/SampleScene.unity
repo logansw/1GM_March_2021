@@ -1221,7 +1221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupOne: {fileID: 0}
-  marble: {fileID: 0}
+  marble: {fileID: 6213188397230661264, guid: 5ba3ce4b0180e9b419f1b2afc18f7e30, type: 3}
 --- !u!114 &1953097147
 MonoBehaviour:
   m_ObjectHideFlags: 0
