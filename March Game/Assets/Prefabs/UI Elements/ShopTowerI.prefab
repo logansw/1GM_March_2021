@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3252163044818929424}
   - component: {fileID: 3252163044818929455}
   - component: {fileID: 6122038112663207033}
+  - component: {fileID: 3390212582177133464}
   m_Layer: 12
   m_Name: TowerII
   m_TagString: Untagged
@@ -111,9 +112,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 100
-  structurePrefab: {fileID: 515054926685137222, guid: 41cd0484a5e9a7c4a84e38ee7be72c13,
+  cost: 0
+  structurePrefab: {fileID: 515054926685137241, guid: 41cd0484a5e9a7c4a84e38ee7be72c13,
     type: 3}
+--- !u!50 &3390212582177133464
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3252163044818929454}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6706486765656020605
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3261182981714797259}
   m_Layer: 12
-  m_Name: ShopZero (2)
+  m_Name: ShopTowerI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
