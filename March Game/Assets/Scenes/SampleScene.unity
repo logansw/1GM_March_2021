@@ -212,6 +212,14 @@ MonoBehaviour:
         type: 3}
       delay: 1
       count: 1
+  - roundNum: 2
+    marbleDelayPairs: []
+  - roundNum: 3
+    marbleDelayPairs:
+    - marble: {fileID: 5420854181696580571, guid: 5ba3ce4b0180e9b419f1b2afc18f7e30,
+        type: 3}
+      delay: 0.3
+      count: 40
 --- !u!4 &156542438
 Transform:
   m_ObjectHideFlags: 0
@@ -1288,6 +1296,12 @@ MonoBehaviour:
         type: 3}
       delay: 0.5
       count: 2
+  - roundNum: 3
+    marbleDelayPairs:
+    - marble: {fileID: 5420854181696580571, guid: 5ba3ce4b0180e9b419f1b2afc18f7e30,
+        type: 3}
+      delay: 0.3
+      count: 40
 --- !u!212 &1996602042
 SpriteRenderer:
   m_ObjectHideFlags: 0

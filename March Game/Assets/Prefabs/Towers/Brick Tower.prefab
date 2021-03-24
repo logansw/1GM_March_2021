@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4947435414698747602}
   - component: {fileID: 4947435414698747603}
   - component: {fileID: 4947435414698747600}
-  - component: {fileID: 4947435414698747606}
   m_Layer: 0
   m_Name: Brick Tower
   m_TagString: Untagged
@@ -130,7 +129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4947435414698747604}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de487fcda1412f342aa72adc3e5ddab5, type: 3}
   m_Name: 
@@ -145,18 +144,6 @@ MonoBehaviour:
   maxRange: 30
   pellet: {fileID: 2963756944459376721, guid: 3146a157a9cb1f74aa184cd3fc059760, type: 3}
   barrel: {fileID: 4947435416420798501}
---- !u!114 &4947435414698747606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4947435414698747604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8903e1630a30aff43bda929f613ca450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4947435416420798501
 GameObject:
   m_ObjectHideFlags: 0

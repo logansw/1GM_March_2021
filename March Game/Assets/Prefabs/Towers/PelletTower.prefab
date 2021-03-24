@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 6727572895421889689}
   - component: {fileID: 6727572895421889670}
   - component: {fileID: 6727572895421889688}
-  - component: {fileID: -8312287697881345791}
   - component: {fileID: 976913448706024499}
   m_Layer: 0
   m_Name: PelletTower
@@ -212,7 +211,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6727572895421889671}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de487fcda1412f342aa72adc3e5ddab5, type: 3}
   m_Name: 
@@ -222,23 +221,11 @@ MonoBehaviour:
   rb: {fileID: 6727572895421889670}
   cost: 100
   reloadTime: 0.8
-  fireSpeed: 10
-  pelletDamage: 1
-  maxRange: 50
+  fireSpeed: 12
+  pelletDamage: 2
+  maxRange: 70
   pellet: {fileID: 3221937547889080557, guid: 574e3106da48ba443b452d742a8bd8f7, type: 3}
   barrel: {fileID: 6727572893646163345}
---- !u!114 &-8312287697881345791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6727572895421889671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8903e1630a30aff43bda929f613ca450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &976913448706024499
 MonoBehaviour:
   m_ObjectHideFlags: 0

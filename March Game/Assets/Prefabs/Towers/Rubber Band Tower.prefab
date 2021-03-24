@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 8548173202887666214}
   - component: {fileID: 8548173202887666201}
   - component: {fileID: 8548173202887666200}
-  - component: {fileID: 8548173202887666205}
   - component: {fileID: 8548173202887666206}
   m_Layer: 0
   m_Name: Rubber Band Tower
@@ -204,18 +203,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8548173202887666205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8548173202887666207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8903e1630a30aff43bda929f613ca450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8548173202887666206
 MonoBehaviour:
   m_ObjectHideFlags: 0

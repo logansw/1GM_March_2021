@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 5150506582797461406}
   - component: {fileID: 5150506582797461404}
   - component: {fileID: 5150506582797461379}
-  - component: {fileID: 1622342552473569796}
   - component: {fileID: 5150506582797461377}
   m_Layer: 0
   m_Name: Shotgun Tower
@@ -204,18 +203,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1622342552473569796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5150506582797461378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8903e1630a30aff43bda929f613ca450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5150506582797461377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,11 +219,11 @@ MonoBehaviour:
   col: {fileID: 0}
   rb: {fileID: 0}
   cost: 100
-  reloadTime: 1
-  fireSpeed: 20
+  reloadTime: 1.5
+  fireSpeed: 14
   pelletDamage: 1
-  maxRange: 50
+  maxRange: 35
   pellet: {fileID: 3221937547889080557, guid: 574e3106da48ba443b452d742a8bd8f7, type: 3}
   barrel: {fileID: 5150506582086080148}
   loadLimit: 10
-  noise: 5
+  noise: 10

@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 5226293379532914191}
   - component: {fileID: 5226293379532914192}
   - component: {fileID: 5226293379532914190}
-  - component: {fileID: 1837037248899240855}
   m_Layer: 0
   m_Name: Super Pellet Tower
   m_TagString: Untagged
@@ -211,7 +210,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5226293379532914193}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de487fcda1412f342aa72adc3e5ddab5, type: 3}
   m_Name: 
@@ -223,18 +222,6 @@ MonoBehaviour:
   reloadTime: 0.2
   fireSpeed: 15
   pelletDamage: 2
-  maxRange: 90
+  maxRange: 100
   pellet: {fileID: 3221937547889080557, guid: 574e3106da48ba443b452d742a8bd8f7, type: 3}
   barrel: {fileID: 5226293377694273287}
---- !u!114 &1837037248899240855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5226293379532914193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8903e1630a30aff43bda929f613ca450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

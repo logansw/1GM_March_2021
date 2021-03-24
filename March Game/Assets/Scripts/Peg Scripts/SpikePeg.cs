@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpikePeg : Peg
 {
-    public int damage = 1;
+    public int damage;
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
         base.OnCollisionEnter2D(collision);

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 515054926685137223}
   - component: {fileID: 515054926685137240}
   - component: {fileID: 515054926685137222}
-  - component: {fileID: 6258919623159563487}
   - component: {fileID: 1015363979356438153}
   m_Layer: 0
   m_Name: PelletTowerII
@@ -131,7 +130,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515054926685137241}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de487fcda1412f342aa72adc3e5ddab5, type: 3}
   m_Name: 
@@ -146,18 +145,6 @@ MonoBehaviour:
   maxRange: 90
   pellet: {fileID: 3221937547889080557, guid: 574e3106da48ba443b452d742a8bd8f7, type: 3}
   barrel: {fileID: 515054928123172943}
---- !u!114 &6258919623159563487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515054926685137241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8903e1630a30aff43bda929f613ca450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1015363979356438153
 MonoBehaviour:
   m_ObjectHideFlags: 0
