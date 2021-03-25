@@ -122,10 +122,10 @@ MonoBehaviour:
   col: {fileID: 0}
   rb: {fileID: 4947435414698747603}
   cost: 40
-  reloadTime: 0.75
-  fireSpeed: 15
+  reloadTime: 0.5
+  fireSpeed: 10
   pelletDamage: 1
-  maxRange: 30
+  maxRange: 40
   pellet: {fileID: 2963756944459376721, guid: 3146a157a9cb1f74aa184cd3fc059760, type: 3}
   barrel: {fileID: 4947435416420798501}
 --- !u!61 &8355130877672330239

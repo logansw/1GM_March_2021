@@ -139,7 +139,7 @@ MonoBehaviour:
   col: {fileID: 515054926685137223}
   rb: {fileID: 515054926685137240}
   cost: 100
-  reloadTime: 0.5
+  reloadTime: 0.3
   fireSpeed: 15
   pelletDamage: 2
   maxRange: 90
