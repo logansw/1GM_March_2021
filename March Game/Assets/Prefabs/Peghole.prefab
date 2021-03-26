@@ -126,5 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67bf7d2bfb3d89c4eb78864593a2dcf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopPopup: {fileID: 3500462892602705945, guid: cb478c2428cdbb64995d8a0b60e01058,
+  shopPopup: {fileID: 3502226513031222669, guid: 44162564b6db40f4dbb0fdf35f27571f,
     type: 3}
+  rangeIndicator: {fileID: 0}

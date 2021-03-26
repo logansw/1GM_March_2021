@@ -32,16 +32,13 @@ public class EventMan : Singleton<EventMan>
             NextWaveStart();
     }
 
-    // public event Action purchaseTower; // It's actually simpler when this isn't used
-    // public event Action...
-    // public event Action...
-    // public event Action...
-
-/*    public void EventPurchaseTower()
+    // When the mouse clicks nothing
+    public event Action MouseClickOff;
+    public void EventMouseClickOff()
     {
-        if (purchaseTower != null)
+        if (MouseClickOff != null)
         {
-            purchaseTower();
+            MouseClickOff();
         }
-    }*/
+    }
 }

@@ -34,6 +34,7 @@ public class ResourceMan : Singleton<ResourceMan>
         {
             health += amount;
         }
+        UIMan.Instance.UpdateHealth(health);
     }
 
     public bool CheckHealth()
@@ -44,6 +45,7 @@ public class ResourceMan : Singleton<ResourceMan>
     public void ResetHealth()
     {
         health = STARTING_HEALTH;
+        UIMan.Instance.UpdateHealth(health);
     }
 
     // Attempt to change plinks by specified amount. If amount causes plinks to drop below 0,
@@ -56,7 +58,7 @@ public class ResourceMan : Singleton<ResourceMan>
         } else
         {
             plinks += amount;
-            UIMan.Instance.moneyText.text = "$" + plinks;
+            UIMan.Instance.UpdatePlinks(plinks);
             return true;
         }
     }
@@ -64,6 +66,7 @@ public class ResourceMan : Singleton<ResourceMan>
     public void ResetPlinks()
     {
         plinks = STARTING_PLINKS;
+        UIMan.Instance.UpdatePlinks(plinks);
     }
 
     public int Health
