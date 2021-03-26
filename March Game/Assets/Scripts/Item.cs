@@ -65,6 +65,8 @@ public class Item : MonoBehaviour
             // ShopMan.Instance.ReplaceObjects(selectedEntity, structure);
             structure.transform.position = selectedEntity.transform.position;
             Destroy(selectedEntity);
+
+            // Close popup and hide range indicator
             UIMan.Instance.ClosePopup();
         }
     }

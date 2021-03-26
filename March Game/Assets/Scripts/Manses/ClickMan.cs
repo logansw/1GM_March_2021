@@ -25,7 +25,8 @@ public class ClickMan : MonoBehaviour
             // Change this, it automatically closes the popup
             if (hit.collider == null)
             {
-                UIMan.Instance.ClosePopup();
+                EventMan.Instance.EventMouseClickOff();
+                // UIMan.Instance.ClosePopup();
             }
         } else if (Input.GetMouseButtonDown(1))
         {
