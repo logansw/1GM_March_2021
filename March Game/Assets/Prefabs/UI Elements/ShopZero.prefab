@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3502226513031222669}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.824619, y: 5.4321585, z: -0.48158836}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2508414494244908311}
   - {fileID: 4659628393098282209}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 2508414494244908311}
   - component: {fileID: 175892357469751770}
   - component: {fileID: 9220046896203734668}
-  - component: {fileID: 3527591921343531576}
+  - component: {fileID: 5757289501472169807}
   m_Layer: 12
   m_Name: Peg
   m_TagString: Untagged
@@ -131,7 +131,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3527591921343531576
+--- !u!114 &5757289501472169807
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,11 +140,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4020825593122215270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c0a038b00d55ac4498383860f295dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
+  itemName: Peg
+  cost: 25
+  description: Just a simple peg
+  stats: 'Range: Contact, Damage: None'
   structurePrefab: {fileID: 8888735180459756375, guid: 5c972a50af857814598ac476e45920f1,
+    type: 3}
+  itemDetails: {fileID: -1790925247020537627, guid: 35c89ded37efdd149a544ca456e6b724,
     type: 3}
 --- !u!1 &4659628393098282206
 GameObject:
@@ -257,8 +262,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0a038b00d55ac4498383860f295dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Pellet Tower I
   cost: 100
+  description: Shoots simple pellets at nearby marbles
+  stats: 'Range: Low | Fire Rate: Slow | Damage: Low'
   structurePrefab: {fileID: 6727572895421889671, guid: 2874652f7ee07624b94e344f1012b532,
     type: 3}
-  itemDetails: {fileID: 7840754790094747100, guid: 35c89ded37efdd149a544ca456e6b724,
+  itemDetails: {fileID: -1790925247020537627, guid: 35c89ded37efdd149a544ca456e6b724,
     type: 3}

@@ -104,7 +104,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Range: Short  Fire Rate: Slow Damage: Low'
+  m_text: Stats
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 392d8b1c90c6a804aaba0ae13e292a12, type: 2}
   m_sharedMaterial: {fileID: 6636997303651183377, guid: 392d8b1c90c6a804aaba0ae13e292a12,
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: Cost
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e75a81ae68823c42a7d3e7d0f3a6b49, type: 2}
   m_sharedMaterial: {fileID: 8409037115721919732, guid: 0e75a81ae68823c42a7d3e7d0f3a6b49,
@@ -456,9 +456,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pew pew pew!
-
-    Shoots simple pellets at nearby marbles.'
+  m_text: Description
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 392d8b1c90c6a804aaba0ae13e292a12, type: 2}
   m_sharedMaterial: {fileID: 6636997303651183377, guid: 392d8b1c90c6a804aaba0ae13e292a12,
@@ -620,6 +618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7840754790094747102}
+  - component: {fileID: -1790925247020537627}
   m_Layer: 0
   m_Name: ItemDetails
   m_TagString: Untagged
@@ -646,6 +645,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1790925247020537627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7840754790094747100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e66c35adcafc4d42b46d2b737607434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 1574851391048940901}
+  costText: {fileID: 5871051380707039692}
+  descriptionText: {fileID: 187728745769674309}
+  statsText: {fileID: 7545451983814684430}
 --- !u!1 &7840754791074558240
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +765,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pellet Tower I
+  m_text: ItemName
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e75a81ae68823c42a7d3e7d0f3a6b49, type: 2}
   m_sharedMaterial: {fileID: 8409037115721919732, guid: 0e75a81ae68823c42a7d3e7d0f3a6b49,
