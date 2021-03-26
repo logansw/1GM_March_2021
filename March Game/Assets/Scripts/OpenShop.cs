@@ -9,7 +9,7 @@ public class OpenShop : MonoBehaviour
 
     private void OnMouseDown()
     {
-        UIMan.Instance.OpenPopup(shopPopup, transform);
+        UIMan.Instance.OpenShopPopup(shopPopup, transform);
         if (rangeIndicator != null)
         {
             rangeIndicator.ShowRange();

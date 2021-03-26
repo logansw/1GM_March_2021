@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class ShopItem : MonoBehaviour
 {
+    // The most recently selected item
+    static ShopItem selected;
+
+    // Name of item
+    public string itemName;
     // Cost to buy item
     public int cost;
+    // Item description
+    public string description;
+    // Item stats (Range, damage, reload speed, etc)
+    public string stats;
     // Prefab to instantiate once purchased
     [SerializeField] private GameObject structurePrefab;
     // Original object which will be upgraded or built ontop of
@@ -13,7 +22,7 @@ public class ShopItem : MonoBehaviour
     // Tracks if the item has been clicked once (to bring up confirm screen)
     private bool clickedOnce;
     // Popup with more information about the item
-    [SerializeField] private GameObject itemDetails;
+    [SerializeField] private ItemDetails itemDetails;
 
     // Start is called before the first frame update
     void Start()
@@ -25,13 +34,13 @@ public class ShopItem : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (clickedOnce)
+        if (selected == this)
         {
-            Debug.Log("whattup");
             AttemptPurchase();
         }
         else
         {
+            selected = this;
             OpenItemDetails();
         }
     }
@@ -43,18 +52,27 @@ public class ShopItem : MonoBehaviour
         ResourceMan.Instance.ChangePlinks(-cost);
         GameObject structure = Instantiate(structurePrefab, transform.parent.position, Quaternion.identity);
         structure.transform.position = baseEntity.transform.position;
+        if (structure.CompareTag("Peghole"))
+        {
+            structure.transform.position = new Vector3(structure.transform.position.x, structure.transform.position.y, 1);
+        } else
+        {
+            structure.transform.position = new Vector3(structure.transform.position.x, structure.transform.position.y, 0);
+        }
         Destroy(baseEntity);
         // Treat the purchase like a mouse click off, closing popups and range indicators
         EventMan.Instance.EventMouseClickOff();
     }
 
     // Open up details on the purchase before confirming purchase. Open a popup with the
-    // name, description, cost, and stats of the tower. Gray out the other shopitems while
+    // name, description, cost, and stats of the tower. Grey out the other shopitems while
     // swapping the selected one with a confirm purchase icon. Show range indicator if relevant.
     private void OpenItemDetails()
     {
         clickedOnce = true;
-        UIMan.Instance.OpenPopup(itemDetails, UIMan.Instance.infoPanel);
+        GameObject details = UIMan.Instance.OpenItemDetailsPopup(itemDetails.gameObject, UIMan.Instance.infoPanel);
+        ItemDetails instanceDetails = details.GetComponent<ItemDetails>();
+        instanceDetails.InitializeDetails(this);
     }
 
     private void UnclickOnce()

@@ -67,7 +67,7 @@ public class Item : MonoBehaviour
             Destroy(selectedEntity);
 
             // Close popup and hide range indicator
-            UIMan.Instance.ClosePopup();
+            UIMan.Instance.CloseAllPopups();
         }
     }
 }

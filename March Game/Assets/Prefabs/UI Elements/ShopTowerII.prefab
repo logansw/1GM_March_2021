@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3759791102341777399}
   - component: {fileID: 8163449402306819633}
   - component: {fileID: 2634518074244584697}
-  - component: {fileID: 7990687083287487257}
   - component: {fileID: 7831215065780507771}
+  - component: {fileID: 1357658060574762672}
   m_Layer: 12
   m_Name: Shotgun Tower
   m_TagString: Untagged
@@ -100,21 +100,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7990687083287487257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2532823854635324275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 0
-  structurePrefab: {fileID: 5150506582797461378, guid: ffede6f2f27b9f445b702bb3e4a2e9e4,
-    type: 3}
 --- !u!50 &7831215065780507771
 Rigidbody2D:
   serializedVersion: 4
@@ -136,6 +121,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1357658060574762672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532823854635324275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0a038b00d55ac4498383860f295dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Shotgun Tower
+  cost: 0
+  description: 
+  stats: 
+  structurePrefab: {fileID: 5150506582797461378, guid: ffede6f2f27b9f445b702bb3e4a2e9e4,
+    type: 3}
+  itemDetails: {fileID: -1790925247020537627, guid: 35c89ded37efdd149a544ca456e6b724,
+    type: 3}
 --- !u!1 &2916023816360631309
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,8 +152,8 @@ GameObject:
   - component: {fileID: 4428364538981704828}
   - component: {fileID: 2147089533255581873}
   - component: {fileID: 6939823178855405543}
-  - component: {fileID: 3409116673320436563}
   - component: {fileID: 8313282517607228930}
+  - component: {fileID: 4931263987529018120}
   m_Layer: 12
   m_Name: Super Pellet Tower
   m_TagString: Untagged
@@ -236,21 +241,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3409116673320436563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2916023816360631309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 0
-  structurePrefab: {fileID: 5226293379532914193, guid: 31a858768d8c1e540ae8c33cc8e3c5dc,
-    type: 3}
 --- !u!50 &8313282517607228930
 Rigidbody2D:
   serializedVersion: 4
@@ -272,6 +262,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4931263987529018120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2916023816360631309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0a038b00d55ac4498383860f295dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Super Pellet Tower
+  cost: 0
+  description: 
+  stats: 
+  structurePrefab: {fileID: 5226293379532914193, guid: 31a858768d8c1e540ae8c33cc8e3c5dc,
+    type: 3}
+  itemDetails: {fileID: -1790925247020537627, guid: 35c89ded37efdd149a544ca456e6b724,
+    type: 3}
 --- !u!1 &3396122937902111974
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,8 +328,8 @@ GameObject:
   - component: {fileID: 4554099793645442980}
   - component: {fileID: 763409165992013843}
   - component: {fileID: 6476519791662580544}
-  - component: {fileID: 8206328290172838302}
   - component: {fileID: 364748749292229932}
+  - component: {fileID: 4386340538814766435}
   m_Layer: 12
   m_Name: Rubber Band Tower
   m_TagString: Untagged
@@ -407,21 +417,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8206328290172838302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5610942237175986462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 0
-  structurePrefab: {fileID: 8548173202887666207, guid: 3aa4fc51f6cbbcb438576a2d82786daf,
-    type: 3}
 --- !u!50 &364748749292229932
 Rigidbody2D:
   serializedVersion: 4
@@ -443,6 +438,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4386340538814766435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610942237175986462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0a038b00d55ac4498383860f295dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Rubber Band Tower
+  cost: 0
+  description: 
+  stats: 
+  structurePrefab: {fileID: 8548173202887666207, guid: 3aa4fc51f6cbbcb438576a2d82786daf,
+    type: 3}
+  itemDetails: {fileID: -1790925247020537627, guid: 35c89ded37efdd149a544ca456e6b724,
+    type: 3}
 --- !u!1 &6768734249977040324
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,8 +469,8 @@ GameObject:
   - component: {fileID: 3427882740024574270}
   - component: {fileID: 2377579935489596662}
   - component: {fileID: 3999370060218272196}
-  - component: {fileID: 4574555608164339513}
   - component: {fileID: 4232547673704308323}
+  - component: {fileID: 3283490399609420814}
   m_Layer: 12
   m_Name: Brick Tower
   m_TagString: Untagged
@@ -543,21 +558,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4574555608164339513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6768734249977040324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 0
-  structurePrefab: {fileID: 4947435414698747604, guid: edf2d034c5c742d478ea2f2e7aafcac3,
-    type: 3}
 --- !u!50 &4232547673704308323
 Rigidbody2D:
   serializedVersion: 4
@@ -579,6 +579,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3283490399609420814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6768734249977040324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0a038b00d55ac4498383860f295dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Brick Tower
+  cost: 0
+  description: 
+  stats: 
+  structurePrefab: {fileID: 4947435414698747604, guid: edf2d034c5c742d478ea2f2e7aafcac3,
+    type: 3}
+  itemDetails: {fileID: -1790925247020537627, guid: 35c89ded37efdd149a544ca456e6b724,
+    type: 3}
 --- !u!1 &6850336709153574325
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,8 +610,8 @@ GameObject:
   - component: {fileID: 6850336709153574282}
   - component: {fileID: 6850336709153574283}
   - component: {fileID: 6850336709153574324}
-  - component: {fileID: 2794079798845929186}
   - component: {fileID: 8271443273744460106}
+  - component: {fileID: 5728069706140835231}
   m_Layer: 12
   m_Name: Heavy Pellet Tower
   m_TagString: Untagged
@@ -679,21 +699,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2794079798845929186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6850336709153574325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1807c23dc6d5d5f43bf840c0f83c97f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 0
-  structurePrefab: {fileID: 4927949336144054108, guid: c3732e0cdeec3924fa5a5e1c4e135827,
-    type: 3}
 --- !u!50 &8271443273744460106
 Rigidbody2D:
   serializedVersion: 4
@@ -715,3 +720,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5728069706140835231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6850336709153574325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0a038b00d55ac4498383860f295dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Heavy Pellet Tower
+  cost: 0
+  description: 
+  stats: 
+  structurePrefab: {fileID: 4927949336144054108, guid: c3732e0cdeec3924fa5a5e1c4e135827,
+    type: 3}
+  itemDetails: {fileID: -1790925247020537627, guid: 35c89ded37efdd149a544ca456e6b724,
+    type: 3}

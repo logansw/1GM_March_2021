@@ -6,29 +6,16 @@ using TMPro;
 
 public class ItemDetails : MonoBehaviour
 {
-    [SerializeField] private string itemName;
-    [SerializeField] private int cost;
-    [SerializeField] private string description;
-    [SerializeField] private string range;
-    [SerializeField] private string reloadSpeed;
-    [SerializeField] private int damage;
-
     [SerializeField] private TextMeshPro nameText;
     [SerializeField] private TextMeshPro costText;
     [SerializeField] private TextMeshPro descriptionText;
-    [SerializeField] private TextMeshPro rangeText;
-    [SerializeField] private TextMeshPro reloadSpeedText;
-    [SerializeField] private TextMeshPro damageText;
+    [SerializeField] private TextMeshPro statsText;
 
-    // Start is called before the first frame update
-    void Start()
+    public void InitializeDetails(ShopItem shopItem)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        nameText.text = shopItem.itemName;
+        costText.text = shopItem.cost.ToString();
+        descriptionText.text = shopItem.description;
+        statsText.text = shopItem.stats;
     }
 }
