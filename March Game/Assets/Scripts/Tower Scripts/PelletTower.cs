@@ -144,7 +144,6 @@ public class PelletTower : Entity
         Vector3 P2 = P0 + u0 * tstep + Physics.gravity * tstep * tstep / 2; // Calculate second pellet point after 1 step
         for (float t = tstep; t < tcrit && noObstacles; t += tstep)
         {
-            Debug.Log("Tracing Pellet");
             // Raycast should ignore marbles
             P1 = P2;
             if (t + tstep < tcrit)
@@ -155,9 +154,8 @@ public class PelletTower : Entity
                 P2 = P0 + u0 * tcrit + Physics.gravity * tcrit * tcrit / 2;
             }
             Debug.DrawRay(P1, P2 - P1, Color.white, 2, false);
-            noObstacles = !Physics.Raycast(P1, P2 - P1, (P2 - P1).magnitude); // Shoot raycast from P1 to P2
+            noObstacles = !Physics2D.CircleCast(P1, 0.2f, P2 - P1, (P2 - P1).magnitude, 1, -1, 0.5f); // Shoot raycast from P1 to P2
         }
-        Debug.Log("noObstacles? " + noObstacles); // The raycast doesn't seem to detect anything!
         return noObstacles;
     }
 
