@@ -142,9 +142,11 @@ public class PelletTower : Entity
         Vector3 u0 = (Mcrit - P0).normalized * fireSpeed; // Get aiming direction (pellet velocity)
         Vector3 P1 = P0; // First point is pellet starting point
         Vector3 P2 = P0 + u0 * tstep + Physics.gravity * tstep * tstep / 2; // Calculate second pellet point after 1 step
+        noObstacles = !Physics2D.CircleCast(M0, 0.3f, Mcrit - M0, (Mcrit - M0).magnitude, 1, -1, 0.5f); // Draw line from marble initial to final
+        Debug.DrawRay(M0, Mcrit - M0, Color.blue, 2, false);
+
         for (float t = tstep; t < tcrit && noObstacles; t += tstep)
         {
-            // Raycast should ignore marbles
             P1 = P2;
             if (t + tstep < tcrit)
             {
@@ -154,7 +156,7 @@ public class PelletTower : Entity
                 P2 = P0 + u0 * tcrit + Physics.gravity * tcrit * tcrit / 2;
             }
             Debug.DrawRay(P1, P2 - P1, Color.white, 2, false);
-            noObstacles = !Physics2D.CircleCast(P1, 0.2f, P2 - P1, (P2 - P1).magnitude, 1, -1, 0.5f); // Shoot raycast from P1 to P2
+            noObstacles = !Physics2D.CircleCast(P1, 0.3f, P2 - P1, (P2 - P1).magnitude, 1, -1, 0.5f); // Shoot raycast from P1 to P2
         }
         return noObstacles;
     }
