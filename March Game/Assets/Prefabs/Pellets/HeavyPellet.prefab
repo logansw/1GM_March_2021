@@ -201,5 +201,7 @@ MonoBehaviour:
   damage: 2
   isFresh: 0
   parentList: []
-  lifetime: 3
+  lifetime: 5
   initialLifetime: 0
+  homeStrength: 15
+  maxRange: 50
