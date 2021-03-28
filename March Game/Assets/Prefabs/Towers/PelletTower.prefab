@@ -172,7 +172,7 @@ MonoBehaviour:
   cost: 100
   reloadTime: 0.5
   fireSpeed: 15
-  pelletDamage: 2
+  pelletDamage: 1
   maxRange: 70
   pellet: {fileID: 2661108655570752453, guid: c789ef321b9943f47977961095c598f3, type: 3}
   barrel: {fileID: 6727572893646163345}

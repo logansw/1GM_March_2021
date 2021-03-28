@@ -55,7 +55,7 @@ MonoBehaviour:
   rb: {fileID: 1499838689779716386}
   cost: 0
   shockwave: {fileID: 996518455514933273}
-  maxSize: 5
+  maxSize: 10
   damage: 1
 --- !u!212 &1499838689779716412
 SpriteRenderer:
