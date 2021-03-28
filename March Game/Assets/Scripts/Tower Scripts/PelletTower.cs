@@ -60,7 +60,6 @@ public class PelletTower : Entity
                 if (target != null)
                 {
                     noObstacles = NewtonShot(target);
-                    // Shoot some raycasts, if they hit nothing, shoot and reload
                     if (noObstacles)
                     {
                         Shoot();

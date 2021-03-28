@@ -16,11 +16,16 @@ public class RubberBandTower : PelletTower
             SetReloadLevel();
             // Point towards nearest target
             target = AcquireTarget();
+            bool noObstacles = false;
             if (target != null && reloadTimer <= (2f / 3f) * reloadTime)
             {
                 AimTowards(target);
-                Shoot();
-                Reload();
+                noObstacles = NewtonShot(target);
+                if (noObstacles)
+                {
+                    Shoot();
+                    Reload();
+                }
             }
             // Update timer
             reloadTimer -= Time.deltaTime;
@@ -29,8 +34,12 @@ public class RubberBandTower : PelletTower
             {
                 if (target != null)
                 {
-                    Shoot();
-                    Reload();
+                    noObstacles = NewtonShot(target);
+                    if (noObstacles)
+                    {
+                        Shoot();
+                        Reload();
+                    }
                 }
             }
         }
