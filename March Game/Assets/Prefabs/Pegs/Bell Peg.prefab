@@ -57,6 +57,7 @@ MonoBehaviour:
   shockwave: {fileID: 996518455514933273}
   maxSize: 10
   damage: 1
+  reloadTime: 0.8
 --- !u!212 &1499838689779716412
 SpriteRenderer:
   m_ObjectHideFlags: 0

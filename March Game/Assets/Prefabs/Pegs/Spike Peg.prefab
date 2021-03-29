@@ -52,6 +52,7 @@ MonoBehaviour:
   col: {fileID: 5139537165090555166}
   rb: {fileID: 5139537165090555167}
   cost: 0
+  reloadTime: 0.6
   damage: 2
 --- !u!212 &5139537165090555165
 SpriteRenderer:
