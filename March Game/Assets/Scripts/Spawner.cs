@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
     private int currentWaveIndex;
     private Wave currentWave;
     private float delay;
+    [SerializeField] private float noise;
     [HideInInspector] public bool DoneSpawning { get; private set; }
 
     public Queue<Wave.MarbleDelayPair> waveContents;
@@ -64,7 +65,8 @@ public class Spawner : MonoBehaviour
             Wave.MarbleDelayPair nextMDP = waveContents.Dequeue();
             Marble nextMarble = nextMDP.marble;
             delay = nextMDP.delay;
-            Instantiate(nextMarble, transform.position, Quaternion.identity);
+            Vector3 rand = new Vector3(Random.Range(-noise, noise), 0, 0);
+            Instantiate(nextMarble, transform.position + rand, Quaternion.identity);
         }
     }
 
