@@ -136,7 +136,7 @@ MonoBehaviour:
   sp: {fileID: 0}
   col: {fileID: 8847591333157520793}
   rb: {fileID: 5847880719302605741}
-  health: 5
+  health: 10
   damage: 2
   coins:
   - {fileID: 3778056273671538110, guid: 8355fc892e04a144294094afde227811, type: 3}

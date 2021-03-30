@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8181229347024589119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.83, y: 2, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   sp: {fileID: 0}
   col: {fileID: 2004599506917050569}
   rb: {fileID: 8323824111973904306}
-  health: 2
+  health: 3
   damage: 1
   coins:
   - {fileID: 9054860662400118362, guid: c0bd222b07d010e4786dfa5f660693a3, type: 3}
