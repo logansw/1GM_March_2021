@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 874007389997526552}
   - component: {fileID: 6665263430766088613}
   m_Layer: 9
-  m_Name: Pellet (2)
+  m_Name: Pellet 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +158,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Shotgun Tower
-  cost: 0
+  cost: 200
   description: 
   stats: 
   structurePrefab: {fileID: 5150506582797461378, guid: ffede6f2f27b9f445b702bb3e4a2e9e4,
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Super Pellet Tower
-  cost: 0
+  cost: 200
   description: 
   stats: 
   structurePrefab: {fileID: 5226293379532914193, guid: 31a858768d8c1e540ae8c33cc8e3c5dc,
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Rubber Band Tower
-  cost: 0
+  cost: 200
   description: 
   stats: 
   structurePrefab: {fileID: 8548173202887666207, guid: 3aa4fc51f6cbbcb438576a2d82786daf,
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Brick Tower
-  cost: 0
+  cost: 200
   description: 
   stats: 
   structurePrefab: {fileID: 4947435414698747604, guid: edf2d034c5c742d478ea2f2e7aafcac3,
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Heavy Pellet Tower
-  cost: 0
+  cost: 200
   description: 
   stats: 
   structurePrefab: {fileID: 4927949336144054108, guid: c3732e0cdeec3924fa5a5e1c4e135827,

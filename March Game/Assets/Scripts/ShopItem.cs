@@ -23,6 +23,8 @@ public class ShopItem : MonoBehaviour
     private bool clickedOnce;
     // Popup with more information about the item
     [SerializeField] private ItemDetails itemDetails;
+    // Check if we have enough money to buy
+    private bool canBuy;
 
     // Start is called before the first frame update
     void Start()
@@ -49,17 +51,21 @@ public class ShopItem : MonoBehaviour
     // entity and the shop popup and range indicators are closed down.
     private void AttemptPurchase()
     {
-        ResourceMan.Instance.ChangePlinks(-cost);
-        GameObject structure = Instantiate(structurePrefab, transform.parent.position, Quaternion.identity);
-        structure.transform.position = baseEntity.transform.position;
-        if (structure.CompareTag("Peghole"))
+        canBuy = ResourceMan.Instance.ChangePlinks(-cost);
+        if (canBuy)
         {
-            structure.transform.position = new Vector3(structure.transform.position.x, structure.transform.position.y, 1);
-        } else
-        {
-            structure.transform.position = new Vector3(structure.transform.position.x, structure.transform.position.y, 0);
+            GameObject structure = Instantiate(structurePrefab, transform.parent.position, Quaternion.identity);
+            structure.transform.position = baseEntity.transform.position;
+            if (structure.CompareTag("Peghole"))
+            {
+                structure.transform.position = new Vector3(structure.transform.position.x, structure.transform.position.y, 1);
+            }
+            else
+            {
+                structure.transform.position = new Vector3(structure.transform.position.x, structure.transform.position.y, 0);
+            }
+            Destroy(baseEntity);
         }
-        Destroy(baseEntity);
         // Treat the purchase like a mouse click off, closing popups and range indicators
         EventMan.Instance.EventMouseClickOff();
     }
